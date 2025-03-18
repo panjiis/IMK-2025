@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\imk\\test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5C00A68-E6DB-FEA3-938C-F34D364EA738}|Assembly-CSharp.csproj|c:\\users\\lenovo\\imk\\test\\assets\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E5C00A68-E6DB-FEA3-938C-F34D364EA738}|Assembly-CSharp.csproj|c:\\users\\lenovo\\imk\\test\\assets\\newmonobehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5C00A68-E6DB-FEA3-938C-F34D364EA738}|Assembly-CSharp.csproj|solutionrelative:assets\\newmonobehaviourscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5C00A68-E6DB-FEA3-938C-F34D364EA738}|Assembly-CSharp.csproj|C:\\Users\\Lenovo\\imk\\test\\assets\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5C00A68-E6DB-FEA3-938C-F34D364EA738}|Assembly-CSharp.csproj|solutionrelative:assets\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5C00A68-E6DB-FEA3-938C-F34D364EA738}|Assembly-CSharp.csproj|C:\\Users\\Lenovo\\imk\\test\\assets\\lol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DC068CE2-A1A4-566F-A155-C010D2F8914D}|Assembly-CSharp-Editor.csproj|C:\\Users\\Lenovo\\imk\\test\\assets\\jmo assets\\cartoon fx easy editor\\editor\\cfxeasyeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC068CE2-A1A4-566F-A155-C010D2F8914D}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\jmo assets\\cartoon fx easy editor\\editor\\cfxeasyeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5C00A68-E6DB-FEA3-938C-F34D364EA738}|Assembly-CSharp.csproj|c:\\users\\lenovo\\imk\\test\\assets\\lol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5C00A68-E6DB-FEA3-938C-F34D364EA738}|Assembly-CSharp.csproj|solutionrelative:assets\\lol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,36 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewMonoBehaviourScript.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\imk\\test\\Assets\\NewMonoBehaviourScript.cs",
+              "RelativeDocumentMoniker": "Assets\\NewMonoBehaviourScript.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\imk\\test\\Assets\\NewMonoBehaviourScript.cs",
+              "RelativeToolTip": "Assets\\NewMonoBehaviourScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T14:31:34.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "lol.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\imk\\test\\Assets\\lol.cs",
+              "RelativeDocumentMoniker": "Assets\\lol.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\imk\\test\\Assets\\lol.cs",
+              "RelativeToolTip": "Assets\\lol.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAYwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T02:48:12.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CFXEasyEditor.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\imk\\test\\Assets\\JMO Assets\\Cartoon FX Easy Editor\\Editor\\CFXEasyEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\JMO Assets\\Cartoon FX Easy Editor\\Editor\\CFXEasyEditor.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\imk\\test\\Assets\\JMO Assets\\Cartoon FX Easy Editor\\Editor\\CFXEasyEditor.cs",
+              "RelativeToolTip": "Assets\\JMO Assets\\Cartoon FX Easy Editor\\Editor\\CFXEasyEditor.cs",
+              "ViewState": "AgIAAOIBAAAAAAAAAAAUwBUCAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T13:51:02.437Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\imk\\test\\Assets\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\MainMenu.cs",
               "ToolTip": "C:\\Users\\Lenovo\\imk\\test\\Assets\\MainMenu.cs",
               "RelativeToolTip": "Assets\\MainMenu.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T13:03:39.262Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "lol.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\imk\\test\\Assets\\lol.cs",
-              "RelativeDocumentMoniker": "Assets\\lol.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\imk\\test\\Assets\\lol.cs",
-              "RelativeToolTip": "Assets\\lol.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T02:48:12.727Z"
             }
           ]
         }
