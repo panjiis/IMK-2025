@@ -9,7 +9,7 @@ public class lol : MonoBehaviour
     public ParticleSystem muzzleFlash; // Efek visual tembakan
     public GameObject bulletPrefab; // Prefab peluru
     public Transform gunTip; // Posisi awal peluru
-    public float bulletSpeed = 20f;
+    public float bulletSpeed = 0.0005f;
 
     private Rigidbody rb;
     private float rotationX = 0f;

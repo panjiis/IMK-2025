@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Target
+  - Target2
+  - Target3
+  - plane
+  - sleep
   layers:
   - Default
   - TransparentFX

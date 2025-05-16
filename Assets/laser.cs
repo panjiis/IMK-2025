@@ -4,7 +4,7 @@ public class laser : MonoBehaviour
 {
     public LineRenderer lineRenderer;
     public Transform firePoint;  // Titik awal laser
-    public float laserDistance = 20f;  // Jarak maksimal laser
+    public float laserDistance = 0.0001f;  // Jarak maksimal laser
 
     void Start()
     {
