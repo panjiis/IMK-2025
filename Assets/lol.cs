@@ -1,52 +1,72 @@
 using UnityEngine;
+using UnityEngine.XR;
 
 public class lol : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float mouseSensitivity = 2f;
+    public float moveSpeed = 2f;
     public AudioSource audioSource;
     public AudioClip shootSound;
-    public ParticleSystem muzzleFlash; // Efek visual tembakan
-    public GameObject bulletPrefab; // Prefab peluru
-    public Transform gunTip; // Posisi awal peluru
-    public float bulletSpeed = 0.0005f;
+    public ParticleSystem muzzleFlash;
+    public GameObject bulletPrefab;
+    public Transform gunTip;
+    public float bulletSpeed = 20f;
 
     private Rigidbody rb;
-    private float rotationX = 0f;
+    private bool triggerPressed = false;
+
+    // Untuk snap turn cooldown
+    private float lastSnapTime = 0f;
+    public float snapCooldown = 0.4f; // detik
+    public float snapAngle = 30f;
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
-
         if (muzzleFlash != null)
-        {
             muzzleFlash.Stop();
-        }
     }
 
     void Update()
     {
-        // ======== ROTASI KAMERA ========
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        // Dapatkan device remote kanan
+        InputDevice rightHand = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
-        rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
-
-        transform.Rotate(Vector3.up * mouseX);
-        Camera.main.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-
-        // ======== TEMBAKAN ========
-        if (Input.GetMouseButtonDown(0))
+        // ===== Rotasi snap dengan joystick kanan (primary2DAxis) =====
+        if (rightHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 joystick))
         {
-            Shoot();
+            if (Time.time - lastSnapTime > snapCooldown)
+            {
+                if (joystick.x > 0.7f)
+                {
+                    transform.Rotate(0, snapAngle, 0);
+                    lastSnapTime = Time.time;
+                }
+                else if (joystick.x < -0.7f)
+                {
+                    transform.Rotate(0, -snapAngle, 0);
+                    lastSnapTime = Time.time;
+                }
+            }
+        }
+
+        // ===== Trigger kanan untuk menembak =====
+        if (rightHand.TryGetFeatureValue(CommonUsages.triggerButton, out bool isTriggerPressed))
+        {
+            if (isTriggerPressed && !triggerPressed)
+            {
+                Shoot();
+                triggerPressed = true;
+            }
+            else if (!isTriggerPressed)
+            {
+                triggerPressed = false;
+            }
         }
     }
 
     void FixedUpdate()
     {
-        // ======== GERAKAN KARAKTER ========
+        // Gerakan karakter menggunakan input keyboard (default)
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
@@ -58,30 +78,18 @@ public class lol : MonoBehaviour
 
     void Shoot()
     {
-        if (audioSource != null && shootSound != null)
-        {
-            audioSource.PlayOneShot(shootSound);
-        }
-
         if (muzzleFlash != null)
-        {
             muzzleFlash.Play();
-            Invoke("StopMuzzleFlash", 0.5f);
-        }
 
-        // Spawn peluru
-        GameObject bullet = Instantiate(bulletPrefab, gunTip.position, gunTip.rotation);
-        Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-        bulletRb.linearVelocity = gunTip.forward * bulletSpeed; // Maju lurus sesuai arah pandangan
+        if (audioSource != null && shootSound != null)
+            audioSource.PlayOneShot(shootSound);
 
-        Destroy(bullet, 3f); // Hapus peluru setelah 3 detik agar tidak memenuhi scene
-    }
-
-    void StopMuzzleFlash()
-    {
-        if (muzzleFlash != null)
+        if (bulletPrefab != null && gunTip != null)
         {
-            muzzleFlash.Stop();
+            GameObject bullet = Instantiate(bulletPrefab, gunTip.position, gunTip.rotation);
+            Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+            bulletRb.linearVelocity = gunTip.forward * bulletSpeed;
+            Destroy(bullet, 3f);
         }
     }
 }
