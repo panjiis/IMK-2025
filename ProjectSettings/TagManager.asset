@@ -9,6 +9,7 @@ TagManager:
   - Target3
   - plane
   - sleep
+  - Sheep
   layers:
   - Default
   - TransparentFX
