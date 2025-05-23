@@ -5,6 +5,7 @@ public class SheepFollower : MonoBehaviour
     public Transform player;         // XR Origin
     public float followSpeed = 2f;
     public float stopDistance = 1.5f;
+    
 
     public void FollPlayer()
     {
